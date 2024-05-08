@@ -11,7 +11,7 @@ import {MONGO_URL} from "./app";
 
 
 
-import router from "./router";
+import router from "./src/router";
 const app = express();
 
 app.use(cors({
@@ -37,6 +37,8 @@ mongoose.connect(MONGO_URL);
 mongoose.connection.on('error', (error:Error) => console.log(error) );
 
 app.use('/',router());
+
+
 
 
 
