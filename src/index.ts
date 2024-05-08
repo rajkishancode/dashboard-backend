@@ -28,7 +28,9 @@ server.listen(8080, () => {
     console.log('Server running on http://localhost:8080/');
 })
 
-
+app.get('/', (req, res) => {
+  res.send('Dashboard Backend started!');
+});
 
 mongoose.Promise = Promise;
 mongoose.connect(MONGO_URL);
